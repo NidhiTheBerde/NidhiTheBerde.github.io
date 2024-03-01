@@ -76,10 +76,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 }
 audio,canvas,video {
 	display:inline-block;
-	display:inline;
-	zoom : 1;
+	*display:inline;
+	*zoom: 1;
 }
-/* Remove excess height in iOS 5 devices. */
+* Remove excess height in iOS 5 devices. */
 audio:not([controls]) {
 	display:none;
 	height:0;
@@ -234,13 +234,13 @@ legend {
 	border:0;
 	padding:0;
 	white-space:normal;
-	margin-left:-7px;
+	*margin-left:-7px;
 }
 button,input,select,textarea {
 	font-size:100%;
-	margin:0;
+	/margin:0;
 	vertical-align:baseline;
-	vertical-align:middle;
+	*vertical-align:middle;
 }
 button,input {
 	line-height:normal;
@@ -248,7 +248,7 @@ button,input {
 button,html input[type="button"],input[type="reset"],input[type="submit"] {
 	-webkit-appearance:button;
 	cursor:pointer;
-	overflow:visible;
+	*overflow:visible;
 }
 button[disabled],input[disabled] {
 	cursor:default;
@@ -256,8 +256,8 @@ button[disabled],input[disabled] {
 input[type="checkbox"],input[type="radio"] {
 	box-sizing:border-box;
 	padding:0;
-	height:13px;
-	width: 13px;
+	*height:13px;
+	*width:13px;
 }
 input[type="search"] {
 	-webkit-appearance:textfield;
@@ -453,7 +453,7 @@ table {
 }
 /* ==========================================================================Hero========================================================================== */
 .hero {
-	background: url('../img/Nidhi-header.jpg') right bottom no-repeat;
+	background: url('../img/header-bg.jpg') right bottom no-repeat;
 	background-size: contain;
 	padding:110px 0 100px 0;
 	height:auto;
@@ -566,13 +566,13 @@ h1.arrow {
 	background:url('../img/h1-bg.png') no-repeat center bottom;
 	padding-bottom:30px;
 	font-weight: bold;
-}x
+}
 h1.arrow span {
     color: #E04343;
 }
 /* ==========================================================================About========================================================================== */
 .about-image {
-	height: 400px;
+	height:400px;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
