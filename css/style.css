@@ -453,9 +453,9 @@ table {
 }
 /* ==========================================================================Hero========================================================================== */
 .hero {
-	background: url('../img/header-bg.jpg') right bottom no-repeat;
+	background: url('../img/Nidhi-header.jpg') right bottom no-repeat;
 	background-size: contain;
-	padding:110px 0 100px 0;
+	padding:110px 50px 100px 0;
 	height:auto;
 	background-color: #FBFBFB;
 }
@@ -572,11 +572,11 @@ h1.arrow span {
 }
 /* ==========================================================================About========================================================================== */
 .about-image {
-	height:400px;
+	height:auto;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
-	background-size: 500px;
+	background-size: cover;
 }
 .color-bg {
 	background: #E04343;
