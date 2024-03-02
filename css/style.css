@@ -470,6 +470,7 @@ table {
 	padding:110px 50px 100px 0;
 	height:auto;
 	background-color: #FBFBFB;
+	background-position: 20% bottom; 
 }
 .hero h1 {
 	font-size: 120px;
