@@ -465,8 +465,8 @@ table {
 }
 /* ==========================================================================Hero========================================================================== */
 .hero {
-	background: url('../img/Nidhi-header.jpg') right bottom no-repeat;
-	background-size: cover;
+	background: url('../img/Nidhi-header.jpg') center bottom no-repeat;
+	background-size: contain;
 	padding:110px 50px 100px 0;
 	height:auto;
 	background-color: #FBFBFB;
