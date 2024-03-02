@@ -214,11 +214,18 @@ img {
 	border:0;
 	-ms-interpolation-mode:bicubic;
 }
-.blog img{
-	width:200px;
-	height: 200px; 
-	;
+.blog {
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    overflow: hidden; /* Hide any overflow if the image is larger than the container */
 }
+
+.blog img {
+    width: 100%; /* Make the image fill the container horizontally */
+    height: 100%; /* Make the image fill the container vertically */
+    object-fit: cover; /* Scale the image while preserving aspect ratio, cropping as needed */
+}
+
 svg:not(:root) {
 	overflow: hidden;
 }
