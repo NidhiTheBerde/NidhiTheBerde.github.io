@@ -1,64 +1,52 @@
-$(window).load(function(){
-	$('#preloader').fadeOut('slow',function(){$(this).remove();});
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navMobile = document.getElementById('nav-mobile');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navMobile.classList.toggle('open');
 });
 
-
-/******************************************************************************************************************************
-Learn More Page Scroll
-*******************************************************************************************************************************/
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
+// Close mobile menu when a link is clicked
+navMobile.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navMobile.classList.remove('open');
+  });
 });
 
-/******************************************************************************************************************************
-Menu
-*******************************************************************************************************************************/ 
-(function() {
+// Navbar scroll shadow
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+  highlightNav();
+});
 
-	var bodyEl = document.body,
-		//content = document.querySelector( '.content-wrap' ),
-		openbtn = document.getElementById( 'open-button' ),
-		closebtn = document.getElementById( 'close-button' ),
-		isOpen = false;
+// Active nav link highlighting based on scroll position
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
-	function init() {
-		initEvents();
-	}
+function highlightNav() {
+  const scrollY = window.scrollY + 100;
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
+    if (scrollY >= top && scrollY < top + height) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    }
+  });
+}
 
-	function initEvents() {
-		openbtn.addEventListener( 'click', toggleMenu );
-		if( closebtn ) {
-			closebtn.addEventListener( 'click', toggleMenu );
-		}
-
-		/* close the menu element if the target it´s not the menu element or one of its descendants..
-		content.addEventListener( 'click', function(ev) {
-			var target = ev.target;
-			if( isOpen && target !== openbtn ) {
-				toggleMenu();
-			}
-		} );
-		*/
-	}
-
-	function toggleMenu() {
-		if( isOpen ) {
-			classie.remove( bodyEl, 'show-menu' );
-		}
-		else {
-			classie.add( bodyEl, 'show-menu' );
-		}
-		isOpen = !isOpen;
-	}
-
-	init();
-
-})();
-
-
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    const offset = target.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  });
+});

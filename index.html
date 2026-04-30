@@ -1,544 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Website Title -->
-    <title>Nidhi Berde - Aspiring Data Engineer and Developer</title>
-    <!-- Bootstrap -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Font-Awesome -->
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<!-- Lightbox -->
-	<link href="assets/lightbox/css/lightbox.css" rel="stylesheet">
-    <!-- Text Rotator-->
-	<link href="assets/textrotator/simpletextrotator.css" rel="stylesheet">
-	<!-- FlexSlider -->
-    <link href="assets/flexslider/flexslider.css" rel="stylesheet">
-	<!-- Theme Style -->
-    <link href="css/style.css" rel="stylesheet">
-	<!-- Animations -->
-    <link href="css/animate.css" rel="stylesheet">
-	<!-- Custom Favicon -->
-	<!--link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" / --> 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="assets/html5shiv/html5shiv.js"></script>
-    <script src="assets/respond/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZZTS0ND30"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nidhi Berde — Data & GenAI Engineer</title>
+  <meta name="description" content="Nidhi Berde — Data Engineer and GenAI specialist based in New York. Expert in LangChain, LangGraph, RAG, Azure OpenAI, AWS, GCP, and scalable ETL pipelines.">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZZTS0ND30"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KZZTS0ND30');
+  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Styles -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
 
-  gtag('config', 'G-KZZTS0ND30');
-</script>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">NB<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://drive.google.com/file/d/1mH_JxBhdkNKFmaAtEyuqY1ODETN7xJov/view?usp=sharing"
+             class="btn-resume" target="_blank" rel="noopener">Resume</a>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#volunteer">Volunteer</a>
+      <a href="#contact">Contact</a>
+      <a href="https://drive.google.com/file/d/1mH_JxBhdkNKFmaAtEyuqY1ODETN7xJov/view?usp=sharing"
+         target="_blank" rel="noopener">Resume</a>
+    </div>
+  </nav>
 
-    <body id="top">
-
-      <!-- ****************************** Preloader ************************** -->
-      <div id="preloader"></div>
-
-
-	  	<!-- ==========================
-        HEADER SECTION 
-        =========================== -->
-        <header id="home">
-		    <!-- creative menu -->
-            <div class="container-fluid">
-              <div class="row">
-                <div class="menu-wrap">
-				<nav class="menu">
-				    <!-- Menu Links -->
-					<div class="icon-list">
-						<a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-						<a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-						<a href="https://www.linkedin.com/in/nidhi-berde/"><i class="fa fa-fw fa-globe"></i><span>LinkedIn</span></a>
-						<a href="https://drive.google.com/file/d/1mH_JxBhdkNKFmaAtEyuqY1ODETN7xJov/view?usp=sharing"><i class="fa fa-fw fa-envelope-o"></i><span>Resume</span></a>
-						<a href="index.html#contact"><i class="fa fa-fw fa-mobile"></i><span>Contact</span></a>
-					</div>
-				</nav>
-			    </div>
-			    <button class="menu-button" id="open-button"></button><!-- menu button -->
-              </div><!--/row-->
-            </div><!--/container-->
-		  <!-- Header Image -->
-          <section class="hero" id="hero">
-            <div class="container">
-			  <!-- Slider Button (don't edit!)-->
-              <div class="row">
-                <div class="col-md-12 text-right navicon">
-                  <a id="nav-toggle" class="nav_slide_button" href="index.html#"><span></span></a>
-                </div>
-              </div>
-			  <!-- HEADER HEADLINE -->
-              <div class="row">
-                <div class="col-md-8 col-md-offset-1 inner">
-                  <h1 class="animated fadeInDown">
-                    <span style="color:rgb(2, 2, 2);">NIDHI</span><br/>
-                    <span style="color:RGB(2,2.2);">BERDE</span>
-                  </h1><!-- Title -->
-                  <h3 class="animated fadeInUp delay-05s"><span class="rotate">Data Engineer, Data Analyst, Software Developer</span></h3><!-- Text Rotator -->
-                </div>
-              </div>
-
-            </div>
-          </section>
-		  <!-- Header Image End -->
-        </header>
-		<!-- ==========================
-        HEADER SECTION END  
-        =========================== -->
-		
-		
-		
-		
-		<!-- ==========================
-        ABOUT SECTION  
-        =========================== -->
-        <section class="intro text-center section-padding color-bg" id="about">
-          <div class="container">
-		    <!-- WELCOME TEXT -->
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2 wp1">
-                <h1 class="arrow">A little <span>about</span> me</h1><!-- Headline -->
-				<!-- about / welcome text -->
-                <p>With more than 1.5 years of experience working as a Software Engineer, I was part of a Data Migration and Analytics project. My expertise include SQL queries, Python, Spark, GCP, AWS cloud and Manual Testing.  I'm also constantly willing to learn new technologies. Currently a Computer Science Graduate Student, I aspire to become skilled Data Engineer.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-
-
-<!-- ==========================
-        SERVICE SECTION 
-        =========================== -->
-        <section class="features text-center section-padding" id="service">
-          <div class="container">
-        <!-- Headline -->
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow">Things that I love to</h1>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-          <div class="services">
-          <!-- Service Box 1 -->
-                  <div class="col-md-4 wp2 item">
-                    <div class="icon">
-                      <i class="fa fa-globe"></i><!-- Icon -->
-                    </div>
-                    <h2>Explore</h2><!-- Title -->
-                    <p>I am passionate about exploring new destinations and experiencing different cultures through travel. From hiking in the mountains to strolling through bustling city streets, I love immersing myself in diverse environments and discovering hidden gems around the world.</p><!-- Description -->
-                  </div>
-          <!-- Service Box 2 -->
-                  <div class="col-md-4 wp2 item delay-05s">
-                    <div class="icon">
-                      <i class="fa fa-desktop"></i><!-- Icon -->
-                    </div>
-                    <h2>Develop</h2><!-- Title -->
-                    <p>As a dedicated and motivated individual, I am committed to making meaningful contributions to the field of computer science and leveraging my skills and knowledge to drive positive change </p><!-- Description -->
-                  </div>
-          <!-- Service Box 3 -->
-                  <div class="col-md-4 wp2 item delay-1s">
-                    <div class="icon">
-                      <i class="fa fa-soccer-ball-o"></i><!-- Icon -->
-                    </div>
-                    <h2>Sports</h2><!-- Title -->
-                    <p>Serving as the Team Lead and Publicity Head at SSVM, a nonprofit sports institute in India, I successfully organized and trained 150 coaches in various physical activities. Additionally, I led two sports camps with over 1800 participants. I also volunteered for clerical tasks such as filing, creating presentations, data entry, and article writing. Fun Fact: I was a coach in the Mallakhamb Training Team which conducted two sports camps in Munich in 2010.</p><!-- Description -->
-                  </div>
-          </div>
-                  <div class="clearfix"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-		
-		<!-- ==========================
-        PORTFOLIO SECTION
-    =========================== -->
-        <section class="swag text-center" id="portfolio">
-          <div class="container">
-		    <!-- Headline -->
-            <div class="row">
-              <h1 class="arrow">
-                Recent <span>Projects</span>
-              </h1>
-            </div>
-          </div>
-        </section>
-
-        <div class="container">
-          <div class="row row-offset-0">
-            <div class="container-fluid">
-              <!-- About 1 -->
-            <div class="row color-bg">
-              <div class="col-md-6 nopadding features-intro-img">
-                <div class="about-image" style="background-image:url(img/stock.png)"></div><!-- about image 1 -->
-              </div>
-              <div class="col-md-6 about-text">
-                <h6>Real Time Stock Market Data Project</h6><!-- headline-->
-                <p>In this project, real time data streaming is simulated using python to understand how data is sent from producer to consumer. The purpose of this project is to understand working of kafka and try hands on exercises.</p><!-- About Text 1 -->
-                <p>Tools Used : Python, Kafka, AWS S3, Glue, Athena</p>
-                <p>Techniques : Data Cleaning, Kafka Concepts, ETL</p>
-                <a href="https://nidhitheberde.github.io/Stock_Market_Real_Time_Data_Project/" class="weight-outline-btn">Check it out</a><!-- read more button  -->			
-              </div>
-            </div>
-            <!-- About 2 -->
-            <div class="row">
-              <div class="col-md-6 about-text">
-                <h6>Covid Data ETL with AWS</h6><!-- Headline -->
-                <p>Beginner ETL project to understand and explore various AWS technologies</p>
-                <p>AWS Services and languages used: AWS S3, Crawlers, Glue, Athena, Redshift, Python, SQL</p>
-                <a href="https://nidhitheberde.github.io/Covid-Data-ETL-with-AWS/" class="weight-outline-btn">Check it out</a>	<!-- read more button  -->				
-              </div>
-              <div class="col-md-6 nopadding features-intro-img">
-                <div class="about-image" style="background-image:url(img/etl\ aws.png)"></div><!-- about image 2 -->
-              </div>
-            </div>
-            <!-- About 3 -->
-            <div class="row color-bg">
-              <div class="col-md-6 nopadding features-intro-img">
-                <div class="about-image" style="background-image:url(img/nyc-data.png)"></div><!-- about image 3 -->
-              </div>
-              <div class="col-md-6 about-text">
-                <h6>NYC Crimes Data Analysis</h6><!-- Headline-->
-                <p>This project leverages data analysis and visualization techniques to gain insights into crime trends in New York City. By analyzing crime data from 2010 to 2021, we aim to inform data-driven decision-making processes for enhancing public safety measures.</p><!-- About Text 3 -->
-                <p>Tools Used : Python, Pandas, matplotlib, seaborn</p>
-                <p>Techniques : Exploratory Data Analysis, Statistical Analysis, Visualizations</p>
-                <a href="https://nidhitheberde.github.io/NYC_Data_Analysis/" class="weight-outline-btn">Check it out</a><!-- read more button  -->					
-              </div>
-            </div>
-                <!-- About 4 -->
-                <div class="row">  
-                  <div class="col-md-6 about-text">
-                    <h6>NYC Taxi Data Analysis</h6><!-- Headline-->
-                    <p>This project leverages data analysis and visualization techniques to gain insights into taxi records for the year 2020 in New York City.</p><!-- About Text 3 -->
-                    <p>Tools Used : Python, Pandas, TensorFlow Data Valiadation, matplotlib, seaborn</p>
-                    <p>Techniques : Exploratory Data Analysis, Statistical Analysis, Visualizations</p>
-                    <a href="https://nidhitheberde.github.io/NYC-Taxi-Data-Analysis/" class="weight-outline-btn">Check it out</a><!-- read more button  -->					
-                  </div>
-                  <div class="col-md-6 nopadding features-intro-img">
-                    <div class="about-image" style="background-image:url(img/Trip_Duration_vs_Trip_Amount_vs_Trip_Distance.png)"></div><!-- about image 3 -->
-                  </div>
-                </div>
-          </div>
-         
-          </div>
-  	    <!-- PORTFOLIO ITEM END -->
-        </div><!--/row-->
-      </div><!--/.container-->
-		<!-- ==========================
-        PORTFOLIO SECTION END
-        =========================== -->
-			
-		
-
-
-			
-		<!-- ==========================
-        CUSTOM SPACER
-        =========================== -->
-		<div class="spacer-cta text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <a href="https://drive.google.com/file/d/1mH_JxBhdkNKFmaAtEyuqY1ODETN7xJov/view?usp=sharing" class="outline-btn">View Resume</a>
-              </div>
-            </div>
-          </div>
-        </div>
-		<!-- ==========================
-        CUSTOM SPACER END
-        =========================== -->
-		
-		
-
-    <!-- ==========================
-        BLOG SECTION 
-        =========================== -->
-    <section class="text-center section-padding" id="blog">
-          <div class="container">
-        <!-- Headline -->
-        <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow"> <span>Hackathon</span>Participations</h1>
-              </div>
-            </div><br><br>
-      
-      <!-- Blog Slider -->
-            <div class="row">
-              <div id="blogSlider">
-                <ul class="slides">
-                  <li>
-            <!-- Blog Entry 1 -->
-                    <div class="col-md-4 wp4">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="blog img">
-                          <a href="https://devpost.com/software/ar-tifacts"><img src="img/Artifacts.png"  alt="Blog Item"></a><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>AR-tifacts</h2><!-- Headline -->
-                      <p>Neighborhood Hacks hosted by MLH</p><!-- Description-->
-                    </div>
-          <!-- Blog Entry 2 -->
-                    <div class="col-md-4 wp4 delay-05s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="blog img">
-                          <a href="https://devpost.com/software/sustainable-safari"><img src="img/sustainable-safari.png"  alt="Blog Item"></a><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Sustainable Safari</h2><!-- Headline -->
-                      <p>WaffleHacks hosted by MLH</p><!-- Description -->
-                    </div>
-          <!-- Blog Entry 3 -->
-                    <div class="col-md-4 wp4 delay-1s">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="blog img">
-                         <a href="https://devpost.com/software/upstart-finance"><img src="img/Upstart-finance.png"  alt="Blog Item"></a><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Upstart-finance</h2><!-- Headline -->
-                      <p>Tech Together New York</p><!-- Description-->
-                    </div>
-                  </li>
-                  <li>
-            <!-- Blog Entry 4 -->
-                    <div class="col-md-4 wp4">
-                      <div class="overlay-effect effects clearfix">
-                        <div class="blog img">
-                         <a href="https://devpost.com/software/wisdom-serve"><img src="img/Wisdom-serve.png" alt="Blog Item"></a><!-- Blog Image -->
-                        </div>
-                      </div>
-            <br>
-                      <h2>Wisdom-serve</h2><!-- Headline -->
-                      <p> Black Wings Hack 2024 hosted by Rewriting the Code</p><!-- Description -->
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-    <!-- ==========================
-        BLOG SECTION END
-        =========================== -->
-    
-    
-		<!-- ==========================
-        Work Experience SECTION
-    =========================== -->
-    <section class="swag text-center" id="portfolio">
-      <div class="container">
-    <!-- Headline -->
-        <div class="row">
-          <h1 class="arrow">
-            WORK <span>EXPERIENCE</span>
-          </h1>
-        </div>
+  <!-- ===== HERO ===== -->
+  <section class="hero-section" id="home">
+    <div class="hero-inner">
+      <p class="hero-greeting">Hi, my name is</p>
+      <h1 class="hero-name">Nidhi Berde.</h1>
+      <h2 class="hero-title">I build data pipelines &amp; GenAI-powered systems.</h2>
+      <p class="hero-desc">
+        Data &amp; GenAI Engineer with 3+ years of experience delivering scalable pipelines and
+        intelligent AI workflows. Specialized in LLM orchestration (LangChain, LangGraph), RAG,
+        and Agentic AI on Azure, AWS, and GCP.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
       </div>
-    </section>
+      <div class="hero-social">
+        <a href="https://www.linkedin.com/in/nidhi-berde/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/NidhiTheBerde" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:nishiberde1998@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll-btn" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
 
+  <!-- ===== ABOUT ===== -->
+  <section class="section about-section" id="about">
     <div class="container">
-      <div class="row row-offset-0">
-        <div class="container-fluid">
-          <!-- About 1 -->
-        <div class="row" style="border: 1px solid black;">
-          <div class="col-md-6 about-text" >
-            <h6>ACCENTURE, INDIA</h6><!-- headline-->
-            <h6>Application Development Associate</h6>
-            <P>•	Confronted with the need for robust data migration and quality assurance processes amidst a large-scale platform transition.</P>
-            <P>•	Designed and developed 15 table structures on Google Cloud Platform, facilitating seamless data migration from Hadoop to BigQuery. Collaborated with a cross-functional team to conduct comprehensive manual testing and data quality checks.
-            <P>•	Provided Production support by monitoring ingestion logs. Ensured data accuracy and completeness for over 70 supply chain and sourcing module objects, enhancing operational efficiency and decision-making capabilities.
-          </div>
-          <div class="col-md-6 about-text">
-            <h6>TATA CONSULTANCY SERVICES, USA</h6><!-- headline-->
-            <h6>Data Science Intern</h6>
-            <P>•	Faced with complex data extraction and integration requirements across diverse data sources.</P>
-            <P>•  Assisted in the development and integration of data pipelines extracting data from Oracle, SQL server, and MS Excel, transforming data as per specifications, and loading it into appropriate storage systems.
-            <P>•	Supported data consistency and integrity efforts, ensuring seamless data flow and reliability for downstream analysis.</P>  
-          </div>
-        </div>
-        <!-- About 2 -->
-        <div class="row" style="border: 1px solid black;">
-          <div class="col-md-6 about-text" >
-            <h6>HARLEM CHILDREN'S ZONE</h6><!-- Headline -->
-            <h6>Data Aide</h6>
-            <p>•	Identified significant data inaccuracies impacting program effectiveness and decision-making processes.</p>
-            <P>•	Implemented rigorous quality control measures, including comprehensive data validation checks, and resolving over 1,000 data errors monthly across databases and spreadsheets.</P>
-            <P>•	Achieved a 20% increase in data accuracy, providing program staff and leadership with reliable data insights for informed decision-making.</P>
-          </div>
-          <div class="col-md-6 about-text" >
-            <h6>MICTROSOFT TEALS PROGRAM</h6><!-- Headline -->
-            <h6>Teaching Assistant</h6>
-            <p>•	TA for Python-based Introduction to CS. Assist in developing and delivering instructional materials, including lectures, assignments, and coding exercises to a class of 25 high school students.</p>
-            <p>•	Monitor and track student progress, identifying and addressing any recurring challenges or areas of difficulty.</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Hello! I'm Nidhi, a <strong>Data &amp; GenAI Engineer</strong> based in
+            <strong>New York, USA</strong>. I bridge data engineering and AI to build
+            production-grade intelligent systems.
+          </p>
+          <p>
+            At <strong>TCS</strong>, I engineer document-processing pipelines handling 10,000+ files,
+            build FastAPI + Angular compliance utilities on AWS, and design LangGraph-based agentic
+            workflows using LangChain and Azure OpenAI. Previously at <strong>Accenture</strong>,
+            I migrated 30+ TB of enterprise data from Hadoop to GCP, achieving a 35% boost in
+            query performance and a 40% reduction in pipeline failures.
+          </p>
+          <p>
+            I hold an M.S. in Computer Science (GPA 3.8) from Pace University and an AWS Certified
+            Cloud Practitioner credential. Outside work, you'll find me at hackathons, traveling,
+            or coaching Mallakhamb — including camps I led in Munich!
+          </p>
+          <div class="about-links">
+            <a href="https://drive.google.com/file/d/1mH_JxBhdkNKFmaAtEyuqY1ODETN7xJov/view?usp=sharing"
+               class="btn-primary" target="_blank" rel="noopener">Download Resume</a>
+            <a href="https://www.linkedin.com/in/nidhi-berde/"
+               class="btn-outline" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
-        <!-- About 3 -->
-      </div>
-     
-      </div>
-    <!-- PORTFOLIO ITEM END -->
-    </div><!--/row-->
-  </div><!--/.container-->    
-		
-		<!-- ==========================
-        CLIENT SECTION 
-        =========================== -->
-		<div class="container-fluid">
-			<div class="row color-bg">
-				<!-- Left Image -->
-				<div class="col-md-6 nopadding features-intro-img wow fadeInLeft">
-					<div class="about-image" style="background-image:url(img/clients.png)"></div>
-				</div>
-				<!-- Clients / Testimonials -->
-				<div class="col-md-6 nopadding about-text">
-				<h6>Testimonials from Industry</h6>
-					<div id="clientSlider">
-					   <ul class="slides">
-					       <li><p>Nidhi is most energetic and enthusiastic Newbie I ever worked with. Although Nidhi joined Supplychain POD as a college passout,She was always keen to take responsibility and delivered all tasks single handedly.She is focused, reliable and supportive any given day. She is an asset to any organization. 
-                  Would definitely love to work with Nidhi again. !! <br>	<small>- Saurabh Karle, Senior Quality Engineer, Accenture</small></p></li>
-						   <li><p>Working with Nidhi was a fantastic experience. She is always willing to lend a hand to anyone who needs it. Her ability to overcome challenges with a smile made her stand out as a cut above the rest. I truly admire her passion and commitment to exert her best efforts in all her tasks and daily deliverables. I must say she can be an asset to any company. <br>	<small>- Sukek Shanmugam, Accenture</small></p></li>
-					   </ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- ==========================
-        CLIENTS SECTION END
-        =========================== -->
-		
-		
-		
-		
-
-		
-		
-		<!-- ==========================
-        CONTACT SECTION
-        =========================== -->
-        <section class="text-center section-padding contact-wrap" id="contact">
-		  <!-- To Top Button -->
-          <a href="index.html#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
-          <div class="container">
-		    <!-- Headline -->
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="arrow">Drop <span>me</span> a line</h1>
-              </div>
-            </div>
-            <div class="row contact-details">
-			  <!-- Adress Box -->
-              <div class="col-md-4">
-                <div class="dark-box box-hover">
-                  <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
-                  <p>Jersey City, New Jersey</p>
-                </div>
-              </div>
-			  <!-- Phone Number Box -->
-              <div class="col-md-4">
-                <div class="dark-box box-hover">
-                  <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
-                  <p>+1 929-989-6698</p>
-                </div>
-              </div>
-			  <!-- E-Mail Box -->
-              <div class="col-md-4">
-                <div class="dark-box box-hover">
-                  <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                  <p><a href="mailto:nidhishyamsundar.berde@pace.edu">nidhishyamsundar.berde@pace.edu</a></p>
-                </div>
-              </div>
-            </div>
-			<br>
-			<!-- Social Buttons - use font-awesome, past in what you want -->
-            
+        <div class="about-photo">
+          <div class="photo-wrapper">
+            <img src="img/Nidhi-header.jpg" alt="Nidhi Berde" loading="lazy">
           </div>
-        </section>
-		<!-- ==========================
-        CONTACT SECTION END
-        =========================== -->
-		
-		
-		
-		
-		
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- SmoothScroll -->           
-    <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/waypoints.min.js"></script>
-    <!-- classie.js -->
-	<script src="js/classie.js"></script>
-    <!-- FlexSlider -->
-    <script src="assets/flexslider/jquery.flexslider.js"></script>
-	<!-- Modernizr -->
-    <script src="js/modernizr.js"></script>
-	<!-- Text Rotator -->
-	<script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
-	<!-- Lightbox.js -->
-    <script src="assets/lightbox/js/lightbox.min.js"></script>
-    <!-- Google Maps --> 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeKBBPJTG3v5w3cNPAgM6ZsJiPyL1mP_o&amp;sensor=false"></script>
-	<!-- Theme JavaScript Core -->
-	<script src="js/main.js"></script>
-	<script src="js/script.js"></script>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<!-- GOOGLE MAPS DATA -->
-    <script type="text/javascript">
-    // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-    
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 15,
-                
-                scrollwheel: false,
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-alt skills-section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
 
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.68961985411178, -74.01618003845215), // New York 
+        <div class="skill-category">
+          <h3>Languages &amp; Query</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML/CSS</span>
+          </div>
+        </div>
 
-                // How you would like to style the map. 
-                // This is where you would paste any style found on Snazzy Maps.
-                styles: [	{		featureType:'water',		stylers:[{color:'#F2F2F2'},{visibility:'on'}]	},{		featureType:'landscape',		stylers:[{color:'#FFFFFF'}]	},{		featureType:'road',		stylers:[{saturation:-100},{lightness:45}]	},{		featureType:'road.highway',		stylers:[{visibility:'simplified'}]	},{		featureType:'road.arterial',		elementType:'labels.icon',		stylers:[{visibility:'off'}]	},{		featureType:'administrative',		elementType:'labels.text.fill',		stylers:[{color:'#ADADAD'}]	},{		featureType:'transit',		stylers:[{visibility:'off'}]	},{		featureType:'poi',		stylers:[{visibility:'off'}]	}]
-            };
+        <div class="skill-category">
+          <h3>AI / GenAI</h3>
+          <div class="skill-tags">
+            <span class="tag">LangChain</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Agentic AI</span>
+            <span class="tag">Azure OpenAI</span>
+            <span class="tag">NLP</span>
+          </div>
+        </div>
 
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('googlemaps');
+        <div class="skill-category">
+          <h3>Cloud Platforms</h3>
+          <div class="skill-tags">
+            <span class="tag">Azure</span>
+            <span class="tag">Azure ADF</span>
+            <span class="tag">AWS S3</span>
+            <span class="tag">AWS EC2</span>
+            <span class="tag">GCP BigQuery</span>
+          </div>
+        </div>
 
-            // Create the Google Map using out element and options defined aboves
-            var map = new google.maps.Map(mapElement, mapOptions);
-        }
-	
-    </script>
-	
-	<!-- TEXT ROTATOR SETTINGS -->
-    <script type="text/javascript">
-    $(".rotate").textrotator({
-      animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-      separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-      speed: 2000 // How many milliseconds until the next word show.
-    });
-    </script>
-	
-    </body>
+        <div class="skill-category">
+          <h3>Big Data &amp; ETL</h3>
+          <div class="skill-tags">
+            <span class="tag">PySpark</span>
+            <span class="tag">Apache Kafka</span>
+            <span class="tag">Informatica PowerCenter</span>
+            <span class="tag">Apache Airflow</span>
+            <span class="tag">Hive</span>
+            <span class="tag">Hadoop</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Databases &amp; Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">MongoDB</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">Git</span>
+            <span class="tag">Azure DevOps</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">FastAPI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="timeline">
+
+        <!-- TCS Software Engineer -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Software Engineer – Data and Gen AI</h3>
+                <p class="company">Tata Consultancy Services <span class="location">· Edison, NJ</span></p>
+              </div>
+              <span class="timeline-date">June 2024 – Present</span>
+            </div>
+            <ul class="job-bullets">
+              <li>Engineered a concurrent multi-format document processing pipeline (ThreadPoolExecutor) supporting <strong>15+ file formats</strong> (PDF, Word, Excel, PowerPoint, ZIP, images, video), processing <strong>10,000+ documents</strong> for a leading aerospace &amp; defense client.</li>
+              <li>Built and deployed a <strong>FastAPI backend + Angular frontend</strong> export-control compliance utility integrating AWS (Boto3), Aspose, PyMuPDF, and MongoDB for full request lifecycle tracking.</li>
+              <li>Implemented NLP and <strong>fuzzy-matching logic</strong> (RapidFuzz + regex) to detect, validate, and mark ECCN codes and export-control statements across 10,000+ documents; integrated a GenAI API to extract and analyze text from compliance images.</li>
+              <li>Devised a <strong>LangGraph-based Data Quality agent</strong> using LangChain and Azure OpenAI to interpret schema metadata, generate SQL validation checks, and autonomously execute them to produce data quality reports.</li>
+              <li>Designed a <strong>LangGraph agentic workflow</strong> orchestrating multi-step tool calls for hierarchical product mapping and parallel keyword-driven search to extract top relevant records.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">LangChain</span>
+              <span class="tag-sm">LangGraph</span>
+              <span class="tag-sm">Azure OpenAI</span>
+              <span class="tag-sm">FastAPI</span>
+              <span class="tag-sm">AWS</span>
+              <span class="tag-sm">MongoDB</span>
+              <span class="tag-sm">NLP</span>
+              <span class="tag-sm">RAG</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TCS Intern -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Data Science Intern</h3>
+                <p class="company">Tata Consultancy Services <span class="location">· Edison, NJ</span></p>
+              </div>
+              <span class="timeline-date">June 2023 – Aug 2023</span>
+            </div>
+            <ul class="job-bullets">
+              <li>Built end-to-end <strong>ETL pipelines using Informatica PowerCenter</strong> integrating Oracle, SQL Server, and Excel data into cloud platforms to power business analytics.</li>
+              <li>Optimized data preprocessing workflows — performing validation, cleansing, and transformation across distributed systems to ensure high data integrity.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">Informatica PowerCenter</span>
+              <span class="tag-sm">Oracle</span>
+              <span class="tag-sm">SQL Server</span>
+              <span class="tag-sm">ETL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accenture -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Application Development Associate</h3>
+                <p class="company">Accenture <span class="location">· Mumbai, India</span></p>
+              </div>
+              <span class="timeline-date">Jan 2021 – Aug 2022</span>
+            </div>
+            <ul class="job-bullets">
+              <li>Migrated <strong>30+ TB of enterprise data</strong> from Hadoop to GCP by converting HiveQL scripts to BigQuery SQL, achieving a <strong>35% improvement in query performance</strong>.</li>
+              <li>Designed <strong>15+ scalable BigQuery data tables</strong> supporting cloud analytics for a multinational FMCG company; performed rigorous QA across 30+ supply chain datasets.</li>
+              <li>Automated real-time ingestion monitoring with <strong>Apache Airflow DAGs</strong>, improving operational visibility and reducing pipeline failures by <strong>40%</strong>.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag-sm">GCP</span>
+              <span class="tag-sm">BigQuery</span>
+              <span class="tag-sm">HiveQL</span>
+              <span class="tag-sm">Apache Airflow</span>
+              <span class="tag-sm">Hadoop</span>
+              <span class="tag-sm">SQL</span>
+              <span class="tag-sm">Python</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-img project-img--aidradar">
+            <i class="fas fa-satellite-dish"></i>
+          </div>
+          <div class="project-body">
+            <div class="project-links-top">
+              <a href="https://github.com/NidhiTheBerde/aidradar"
+                 target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h3>AidRadar — Multi-Agent Disaster Triage</h3>
+            <p>Multi-agent AI pipeline that ingests disaster text reports and field photos, classifies urgency (Critical → Low) and crisis type, extracts geolocations via NER + geocoding, and surfaces everything on a live Streamlit dashboard with map and charts — so responders see the most critical reports first.</p>
+            <div class="tech-tags">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">Multi-Agent AI</span>
+              <span class="tag-sm">NLP / NER</span>
+              <span class="tag-sm">Computer Vision</span>
+              <span class="tag-sm">Geocoding</span>
+              <span class="tag-sm">Streamlit</span>
+              <span class="tag-sm">EXIF</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background-image:url(img/stock.png)"></div>
+          <div class="project-body">
+            <div class="project-links-top">
+              <a href="https://nidhitheberde.github.io/Stock_Market_Real_Time_Data_Project/"
+                 target="_blank" rel="noopener" aria-label="View Project">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+            <h3>Real-Time Stock Market Data Streaming</h3>
+            <p>Simulated real-time producer-consumer data flows with Apache Kafka and Python, then built a queryable data lake on AWS for live stock data analysis.</p>
+            <div class="tech-tags">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">Apache Kafka</span>
+              <span class="tag-sm">AWS S3</span>
+              <span class="tag-sm">AWS Glue</span>
+              <span class="tag-sm">Athena</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background-image:url('img/etl aws.png')"></div>
+          <div class="project-body">
+            <div class="project-links-top">
+              <a href="https://nidhitheberde.github.io/Covid-Data-ETL-with-AWS/"
+                 target="_blank" rel="noopener" aria-label="View Project">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+            <h3>Covid Data ETL with AWS</h3>
+            <p>End-to-end ETL pipeline on AWS: raw data ingested into S3, catalogued via Glue Crawlers, transformed, and loaded into Redshift for SQL analytics.</p>
+            <div class="tech-tags">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">AWS S3</span>
+              <span class="tag-sm">AWS Glue</span>
+              <span class="tag-sm">Redshift</span>
+              <span class="tag-sm">SQL</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HACKATHONS ===== -->
+  <section class="section section-alt hackathons-section" id="hackathons">
+    <div class="container">
+      <h2 class="section-title">Hackathon Participations</h2>
+      <div class="hackathon-grid">
+
+        <a href="https://devpost.com/software/ar-tifacts" class="hackathon-card"
+           target="_blank" rel="noopener">
+          <div class="hackathon-img-wrap">
+            <img src="img/Artifacts.png" alt="AR-tifacts" loading="lazy">
+          </div>
+          <div class="hackathon-body">
+            <h3>AR-tifacts</h3>
+            <p>Neighborhood Hacks · MLH</p>
+          </div>
+        </a>
+
+        <a href="https://devpost.com/software/sustainable-safari" class="hackathon-card"
+           target="_blank" rel="noopener">
+          <div class="hackathon-img-wrap">
+            <img src="img/sustainable-safari.png" alt="Sustainable Safari" loading="lazy">
+          </div>
+          <div class="hackathon-body">
+            <h3>Sustainable Safari</h3>
+            <p>WaffleHacks · MLH</p>
+          </div>
+        </a>
+
+        <a href="https://devpost.com/software/upstart-finance" class="hackathon-card"
+           target="_blank" rel="noopener">
+          <div class="hackathon-img-wrap">
+            <img src="img/Upstart-finance.png" alt="Upstart Finance" loading="lazy">
+          </div>
+          <div class="hackathon-body">
+            <h3>Upstart Finance</h3>
+            <p>Tech Together New York</p>
+          </div>
+        </a>
+
+        <a href="https://devpost.com/software/wisdom-serve" class="hackathon-card"
+           target="_blank" rel="noopener">
+          <div class="hackathon-img-wrap">
+            <img src="img/Wisdom-serve.png" alt="Wisdom Serve" loading="lazy">
+          </div>
+          <div class="hackathon-body">
+            <h3>Wisdom Serve</h3>
+            <p>Black Wings Hack 2024 · Rewriting the Code</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VOLUNTEER ===== -->
+  <section class="section section-alt volunteer-section" id="volunteer">
+    <div class="container">
+      <h2 class="section-title">Volunteer Work</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Teaching Assistant</h3>
+                <p class="company">Microsoft TEALS Program <span class="location">· USA</span></p>
+              </div>
+              <span class="timeline-date">2024</span>
+            </div>
+            <ul class="job-bullets">
+              <li>Co-delivered a Python-based Introduction to Computer Science curriculum to <strong>25 high school students</strong> in partnership with Microsoft.</li>
+              <li>Developed lectures, assignments, and coding exercises; monitored and addressed individual student progress throughout the semester.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">Teaching</span>
+              <span class="tag-sm">Curriculum Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="job-title">Data Aide</h3>
+                <p class="company">Harlem Children's Zone <span class="location">· New York, USA</span></p>
+              </div>
+              <span class="timeline-date">2023 – 2024</span>
+            </div>
+            <ul class="job-bullets">
+              <li>Implemented quality control processes, resolving <strong>1,000+ data errors monthly</strong> across databases and spreadsheets for a nonprofit serving underserved youth.</li>
+              <li>Achieved a <strong>20% increase in data accuracy</strong>, providing program leadership with reliable insights to drive community decisions.</li>
+            </ul>
+            <div class="tech-tags">
+              <span class="tag-sm">Data Validation</span>
+              <span class="tag-sm">SQL</span>
+              <span class="tag-sm">Excel</span>
+              <span class="tag-sm">Quality Control</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section section-dark testimonials-section" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">What People Say</h2>
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Honestly, what stood out about Nidhi wasn't just that she could pick up new tools fast — it's that she actually knew what to build with them. A lot of people play with these tools in notebooks. Nidhi was thinking about how it fits into a real system from day one. She'd ask the right questions: what happens when this fails, how do we validate the output, where does this slow down at scale. Her data instincts are solid. I worked with her on academic projects and would work again without hesitation."</p>
+          <div class="testimonial-author">
+            <strong>Mitesh Goplani</strong>
+            <span>JPMC</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Nidhi is the most energetic and enthusiastic newbie I've ever worked with. Although she joined the Supply Chain POD as a college grad, she was always keen to take responsibility and delivered all tasks single-handedly. She is focused, reliable, and supportive — an asset to any organization."</p>
+          <div class="testimonial-author">
+            <strong>Saurabh Karle</strong>
+            <span>Senior Quality Engineer, Accenture</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Working with Nidhi was a fantastic experience. She is always willing to lend a hand to anyone who needs it. Her ability to overcome challenges with a smile made her stand out. I truly admire her passion and commitment to exerting her best efforts in every task and deliverable."</p>
+          <div class="testimonial-author">
+            <strong>Sukek Shanmugam</strong>
+            <span>Accenture</span>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <p class="contact-desc">
+          I'm currently open to full-time roles in Data Engineering and Software Development.
+          Whether you have an opportunity, a project, or just want to say hi — my inbox is always open!
+        </p>
+        <a href="mailto:nishiberde1998@gmail.com" class="btn-primary contact-cta">Say Hello</a>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/nidhi-berde/" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+          <a href="https://github.com/NidhiTheBerde" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="mailto:nishiberde1998@gmail.com">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </div>
+        <div class="contact-info-grid">
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>New York, USA</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <p>+1 929-989-6698</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-paper-plane"></i>
+            <p>nishiberde1998@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; Built by <strong>Nidhi Berde</strong></p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/nidhi-berde/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/NidhiTheBerde" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:nishiberde1998@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
