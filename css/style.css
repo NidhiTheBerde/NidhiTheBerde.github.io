@@ -593,6 +593,18 @@ ul { list-style: none; }
   background-position: center;
 }
 
+.project-img--product-verifier {
+  background: linear-gradient(135deg, #0d2818 0%, #166534 50%, #4d7c0f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-img--product-verifier i {
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
 .project-img--aidradar {
   background: linear-gradient(135deg, #0d2137 0%, #1a4a6b 50%, #c2410c 100%);
   display: flex;
