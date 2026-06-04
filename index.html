@@ -36,7 +36,7 @@
         <li><a href="#volunteer">Volunteer</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a href="https://drive.google.com/file/d/1mH_JxBhdkNKFmaAtEyuqY1ODETN7xJov/view?usp=sharing"
+          <a href="assets/Resume_Nidhi_Berde_Handshake.pdf"
              class="btn-resume" target="_blank" rel="noopener">Resume</a>
         </li>
       </ul>
@@ -51,7 +51,7 @@
       <a href="#projects">Projects</a>
       <a href="#volunteer">Volunteer</a>
       <a href="#contact">Contact</a>
-      <a href="https://drive.google.com/file/d/1mH_JxBhdkNKFmaAtEyuqY1ODETN7xJov/view?usp=sharing"
+      <a href="assets/Resume_Nidhi_Berde_Handshake.pdf"
          target="_blank" rel="noopener">Resume</a>
     </div>
   </nav>
@@ -112,7 +112,7 @@
             or coaching Mallakhamb — including camps I led in Munich!
           </p>
           <div class="about-links">
-            <a href="https://drive.google.com/file/d/1mH_JxBhdkNKFmaAtEyuqY1ODETN7xJov/view?usp=sharing"
+            <a href="assets/Resume_Nidhi_Berde_Handshake.pdf"
                class="btn-primary" target="_blank" rel="noopener">Download Resume</a>
             <a href="https://www.linkedin.com/in/nidhi-berde/"
                class="btn-outline" target="_blank" rel="noopener">LinkedIn</a>
@@ -208,28 +208,26 @@
           <div class="timeline-card">
             <div class="timeline-header">
               <div>
-                <h3 class="job-title">Software Engineer – Data and Gen AI</h3>
+                <h3 class="job-title">Software Engineer – Data Engineering &amp; AI Platform</h3>
                 <p class="company">Tata Consultancy Services <span class="location">· Edison, NJ</span></p>
               </div>
               <span class="timeline-date">June 2024 – Present</span>
             </div>
             <ul class="job-bullets">
-              <li>Engineered a concurrent multi-format document processing pipeline (ThreadPoolExecutor) supporting <strong>15+ file formats</strong> (PDF, Word, Excel, PowerPoint, ZIP, images, video), processing <strong>10,000+ documents</strong> for a leading aerospace &amp; defense client.</li>
-              <li>Built and deployed a <strong>FastAPI backend + Angular frontend</strong> export-control compliance utility integrating AWS (Boto3), Aspose, PyMuPDF, and MongoDB for full request lifecycle tracking.</li>
-              <li>Implemented NLP and <strong>fuzzy-matching logic</strong> (RapidFuzz + regex) to detect, validate, and mark ECCN codes and export-control statements across 10,000+ documents; integrated a GenAI API to extract and analyze text from compliance images.</li>
-              <li>Devised a <strong>LangGraph-based Data Quality agent</strong> using LangChain and Azure OpenAI to interpret schema metadata, generate SQL validation checks, and autonomously execute them to produce data quality reports.</li>
-              <li>Designed a <strong>LangGraph agentic workflow</strong> orchestrating multi-step tool calls for hierarchical product mapping and parallel keyword-driven search to extract top relevant records.</li>
+              <li><strong>Backend Services &amp; LLM API Integration:</strong> Built and maintained Python/FastAPI backend services integrating Azure OpenAI LLMs into production workflows — exposing AI capabilities via REST APIs consumed by downstream systems, with CI/CD deployment on AWS (EC2, S3, ELB) and full production monitoring.</li>
+              <li><strong>AI Pipeline Development &amp; Reliability:</strong> Designed and operated a production AI data pipeline processing <strong>10,000+ documents</strong> — combining LLM-driven classification, NLP-based validation, and structured data extraction, with observability tooling and confidence tracking for proactive failure detection.</li>
+              <li><strong>Internal Systems Integration &amp; Data APIs:</strong> Built a Python-based backend framework interpreting schema metadata to generate SQL queries dynamically and expose validated, structured outputs via API for cross-functional product and data science teams.</li>
+              <li><strong>Performance Monitoring &amp; Improvement:</strong> Identified and resolved a throughput bottleneck by redesigning batch execution patterns — consolidating LLM API calls, improving response time, and reducing cloud infrastructure costs under production load.</li>
             </ul>
             <div class="tech-tags">
               <span class="tag-sm">Python</span>
+              <span class="tag-sm">FastAPI</span>
+              <span class="tag-sm">Azure OpenAI</span>
               <span class="tag-sm">LangChain</span>
               <span class="tag-sm">LangGraph</span>
-              <span class="tag-sm">Azure OpenAI</span>
-              <span class="tag-sm">FastAPI</span>
-              <span class="tag-sm">AWS</span>
-              <span class="tag-sm">MongoDB</span>
+              <span class="tag-sm">AWS EC2/S3</span>
               <span class="tag-sm">NLP</span>
-              <span class="tag-sm">RAG</span>
+              <span class="tag-sm">CI/CD</span>
             </div>
           </div>
         </div>
@@ -240,21 +238,20 @@
           <div class="timeline-card">
             <div class="timeline-header">
               <div>
-                <h3 class="job-title">Data Science Intern</h3>
+                <h3 class="job-title">Data Engineering Intern</h3>
                 <p class="company">Tata Consultancy Services <span class="location">· Edison, NJ</span></p>
               </div>
               <span class="timeline-date">June 2023 – Aug 2023</span>
             </div>
             <ul class="job-bullets">
-              <li>Built end-to-end <strong>ETL pipelines using Informatica PowerCenter</strong> integrating Oracle, SQL Server, and Excel data into cloud platforms to power business analytics.</li>
-              <li>Optimized data preprocessing workflows — performing validation, cleansing, and transformation across distributed systems to ensure high data integrity.</li>
+              <li>Built end-to-end <strong>ETL pipelines using Informatica PowerCenter</strong> integrating Oracle, SQL Server, and Excel sources into cloud data warehouses — applied validation, cleansing, and transformation logic to ensure data integrity across distributed backend systems.</li>
             </ul>
             <div class="tech-tags">
-              <span class="tag-sm">Python</span>
               <span class="tag-sm">Informatica PowerCenter</span>
               <span class="tag-sm">Oracle</span>
               <span class="tag-sm">SQL Server</span>
               <span class="tag-sm">ETL</span>
+              <span class="tag-sm">Python</span>
             </div>
           </div>
         </div>
@@ -271,16 +268,14 @@
               <span class="timeline-date">Jan 2021 – Aug 2022</span>
             </div>
             <ul class="job-bullets">
-              <li>Migrated <strong>30+ TB of enterprise data</strong> from Hadoop to GCP by converting HiveQL scripts to BigQuery SQL, achieving a <strong>35% improvement in query performance</strong>.</li>
-              <li>Designed <strong>15+ scalable BigQuery data tables</strong> supporting cloud analytics for a multinational FMCG company; performed rigorous QA across 30+ supply chain datasets.</li>
-              <li>Automated real-time ingestion monitoring with <strong>Apache Airflow DAGs</strong>, improving operational visibility and reducing pipeline failures by <strong>40%</strong>.</li>
+              <li><strong>Cloud Infrastructure &amp; Scalable Data Pipelines:</strong> Executed migration of <strong>30+ TB</strong> from on-premises Hadoop to GCP BigQuery — designing scalable cloud data infrastructure with partitioning and clustering strategies that achieved a <strong>35% query performance improvement</strong> for downstream analytical systems.</li>
+              <li><strong>Cross-Functional Delivery &amp; Data Reliability:</strong> Designed and maintained <strong>15+ curated data warehouse tables</strong> for a global FMCG client; collaborated with engineers, analysts, and business stakeholders to ship reliable data products across 30+ supply chain datasets.</li>
             </ul>
             <div class="tech-tags">
               <span class="tag-sm">GCP</span>
               <span class="tag-sm">BigQuery</span>
-              <span class="tag-sm">HiveQL</span>
-              <span class="tag-sm">Apache Airflow</span>
               <span class="tag-sm">Hadoop</span>
+              <span class="tag-sm">AWS</span>
               <span class="tag-sm">SQL</span>
               <span class="tag-sm">Python</span>
             </div>
@@ -363,27 +358,6 @@
               <span class="tag-sm">AWS S3</span>
               <span class="tag-sm">AWS Glue</span>
               <span class="tag-sm">Athena</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-img" style="background-image:url('img/etl aws.png')"></div>
-          <div class="project-body">
-            <div class="project-links-top">
-              <a href="https://nidhitheberde.github.io/Covid-Data-ETL-with-AWS/"
-                 target="_blank" rel="noopener" aria-label="View Project">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-            </div>
-            <h3>Covid Data ETL with AWS</h3>
-            <p>End-to-end ETL pipeline on AWS: raw data ingested into S3, catalogued via Glue Crawlers, transformed, and loaded into Redshift for SQL analytics.</p>
-            <div class="tech-tags">
-              <span class="tag-sm">Python</span>
-              <span class="tag-sm">AWS S3</span>
-              <span class="tag-sm">AWS Glue</span>
-              <span class="tag-sm">Redshift</span>
-              <span class="tag-sm">SQL</span>
             </div>
           </div>
         </div>
