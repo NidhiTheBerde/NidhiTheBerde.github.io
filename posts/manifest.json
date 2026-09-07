@@ -5,5 +5,12 @@
     "date": "2026-09-07",
     "excerpt": "Going back to the fundamentals: supervised, unsupervised, and reinforcement learning, and why it's worth revisiting the basics even when most of the day-to-day work is LLMs and agents.",
     "tags": ["Machine Learning", "Fundamentals", "Study Notes"]
+  },
+  {
+    "slug": "2026-09-06-genai-terms-glossary",
+    "title": "12 Must-Know GenAI Terms for Everyone in Tech",
+    "date": "2026-09-06",
+    "excerpt": "A plain-language breakdown of the terms that come up constantly in generative AI right now: LLMs, transformers, prompt engineering, RAG, embeddings, temperature, hallucination, and more.",
+    "tags": ["GenAI", "LLM", "Glossary", "Fundamentals"]
   }
 ]
