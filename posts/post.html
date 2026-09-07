@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loading… — Nidhi Berde</title>
+  <meta name="description" content="Technical writeup by Nidhi Berde.">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZZTS0ND30"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KZZTS0ND30');
+  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Styles -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/posts.css" rel="stylesheet">
+  <!-- Markdown renderer -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/11.1.1/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html#home" class="nav-logo">NB<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="./" class="active">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="./">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== POST ===== -->
+  <section class="section post-section">
+    <div class="container post-container">
+      <a href="./" class="back-link"><i class="fas fa-arrow-left"></i> All posts</a>
+      <div id="post-loading" class="post-loading">Loading…</div>
+      <article id="post-article" class="post-article" hidden>
+        <div class="post-meta-top">
+          <span id="post-date" class="post-date"></span>
+        </div>
+        <h1 id="post-title" class="post-title"></h1>
+        <div id="post-tags" class="tech-tags post-tags"></div>
+        <div id="post-body" class="post-body"></div>
+      </article>
+      <div id="post-error" class="post-error" hidden>
+        <p>Couldn't find that post. <a href="./">Back to all posts</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; Built by <strong>Nidhi Berde</strong></p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/nidhi-berde/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/NidhiTheBerde" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:nishiberde1998@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    (async function () {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+      const loadingEl = document.getElementById('post-loading');
+      const articleEl = document.getElementById('post-article');
+      const errorEl = document.getElementById('post-error');
+
+      if (!slug) {
+        loadingEl.hidden = true;
+        errorEl.hidden = false;
+        return;
+      }
+
+      try {
+        const manifestRes = await fetch('manifest.json');
+        const manifest = await manifestRes.json();
+        const post = manifest.find(p => p.slug === slug);
+        if (!post) throw new Error('Post not found in manifest');
+
+        const mdRes = await fetch(`content/${slug}.md`);
+        if (!mdRes.ok) throw new Error('Post content not found');
+        const mdText = await mdRes.text();
+
+        document.title = `${post.title} — Nidhi Berde`;
+        document.getElementById('post-date').textContent = new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        document.getElementById('post-title').textContent = post.title;
+        document.getElementById('post-tags').innerHTML = (post.tags || []).map(t => `<span class="tag-sm">${t}</span>`).join('');
+        document.getElementById('post-body').innerHTML = marked.parse(mdText);
+
+        loadingEl.hidden = true;
+        articleEl.hidden = false;
+      } catch (err) {
+        console.error(err);
+        loadingEl.hidden = true;
+        errorEl.hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>

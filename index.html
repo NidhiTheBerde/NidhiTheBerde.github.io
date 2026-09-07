@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Styles -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/posts.css" rel="stylesheet">
 </head>
 <body>
 
@@ -33,6 +34,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="posts/">Blog</a></li>
         <li><a href="#volunteer">Volunteer</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
@@ -49,6 +51,7 @@
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="posts/">Blog</a>
       <a href="#volunteer">Volunteer</a>
       <a href="#contact">Contact</a>
       <a href="assets/Resume_Nidhi_Berde_Handshake.pdf"
@@ -218,6 +221,7 @@
               <li><strong>AI Pipeline Development &amp; Reliability:</strong> Designed and operated a production AI data pipeline processing <strong>10,000+ documents</strong> — combining LLM-driven classification, NLP-based validation, and structured data extraction, with observability tooling and confidence tracking for proactive failure detection.</li>
               <li><strong>Internal Systems Integration &amp; Data APIs:</strong> Built a Python-based backend framework interpreting schema metadata to generate SQL queries dynamically and expose validated, structured outputs via API for cross-functional product and data science teams.</li>
               <li><strong>Performance Monitoring &amp; Improvement:</strong> Identified and resolved a throughput bottleneck by redesigning batch execution patterns — consolidating LLM API calls, improving response time, and reducing cloud infrastructure costs under production load.</li>
+              <li><strong>Supplier Identification &amp; Semantic Matching:</strong> Built a name-matching system resolving product/manufacturer names against a 216,000+ entry supplier registry — a vectorized first pass (TF-IDF) returns top candidate matches instantly for high-confidence cases, with a GPT-4 Vision fallback analyzing document images/logos for ambiguous matches. <strong>Cut per-lookup API costs by 60% and improved match accuracy from 33% to 85%.</strong> Currently scaling registry coverage past 300,000 entries with a FAISS-indexed semantic search layer (sentence embeddings, ANN retrieval).</li>
             </ul>
             <div class="tech-tags">
               <span class="tag-sm">Python</span>
@@ -226,7 +230,9 @@
               <span class="tag-sm">LangChain</span>
               <span class="tag-sm">LangGraph</span>
               <span class="tag-sm">AWS EC2/S3</span>
-              <span class="tag-sm">NLP</span>
+              <span class="tag-sm">TF-IDF</span>
+              <span class="tag-sm">FAISS</span>
+              <span class="tag-sm">GPT-4 Vision</span>
               <span class="tag-sm">CI/CD</span>
             </div>
           </div>
@@ -304,14 +310,15 @@
               </a>
             </div>
             <h3>Product Verifier — Two-Agent Scientific Analysis</h3>
-            <p>Two-agent AI pipeline that evaluates consumer products (skincare, supplements, food) by cross-referencing manufacturer claims against PubChem molecular data. Agent 1 researches ingredients and brand claims; Agent 2 runs live Python to check bioavailability via Lipinski, logP, and TPSA rules — delivering a verdict: Scientifically Supported → Unsupported.</p>
+            <p>Two-agent AI pipeline that evaluates consumer products (skincare, supplements, food) by cross-referencing manufacturer claims against PubChem molecular data. A Researcher agent pulls ingredients and brand claims from the web via a Tavily search tool; a Biologist agent checks bioavailability via Lipinski, logP, and TPSA rules — with a conditional LangGraph retry loop that routes low-confidence verdicts back to the Researcher for more evidence. Runs on either the Claude API or a fully local Ollama model.</p>
             <div class="tech-tags">
               <span class="tag-sm">Python</span>
-              <span class="tag-sm">Agentic AI</span>
+              <span class="tag-sm">LangChain</span>
+              <span class="tag-sm">LangGraph</span>
               <span class="tag-sm">Claude API</span>
+              <span class="tag-sm">Ollama</span>
               <span class="tag-sm">PubChem API</span>
-              <span class="tag-sm">NLP</span>
-              <span class="tag-sm">Extended Thinking</span>
+              <span class="tag-sm">Tavily</span>
             </div>
           </div>
         </div>
@@ -342,6 +349,25 @@
         </div>
 
         <div class="project-card">
+          <div class="project-img project-img--newsum">
+            <i class="fas fa-envelope-open-text"></i>
+          </div>
+          <div class="project-body">
+            <h3>Newsletter Intelligence Pipeline</h3>
+            <p>Async 5-layer agentic pipeline that connects to Gmail and turns 20+ newsletter subscriptions across 4 categories into a ranked daily brief. A hybrid heuristic + LLM classification step cuts unnecessary LLM calls before falling back to model-based classification, and a deduplication layer merges overlapping stories across sources instead of naive concatenation. Runs on either the Claude API or a local Ollama model.</p>
+            <div class="tech-tags">
+              <span class="tag-sm">Python</span>
+              <span class="tag-sm">Async / asyncio</span>
+              <span class="tag-sm">Claude API</span>
+              <span class="tag-sm">Ollama</span>
+              <span class="tag-sm">Gmail API</span>
+              <span class="tag-sm">SQLite</span>
+              <span class="tag-sm">Pydantic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
           <div class="project-img" style="background-image:url(img/stock.png)"></div>
           <div class="project-body">
             <div class="project-links-top">
@@ -363,6 +389,19 @@
         </div>
 
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECHNICAL POSTS ===== -->
+  <section class="section section-alt posts-section" id="tech-posts">
+    <div class="container">
+      <h2 class="section-title">Technical Posts</h2>
+      <p class="posts-intro">A running tech diary — things I build, break, debug, or learn.
+        <a href="posts/">View all posts →</a>
+      </p>
+      <div id="home-posts-grid" class="posts-grid">
+        <p>Loading posts…</p>
       </div>
     </div>
   </section>
@@ -573,5 +612,34 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (async function () {
+      const gridEl = document.getElementById('home-posts-grid');
+      if (!gridEl) return;
+      try {
+        const res = await fetch('posts/manifest.json');
+        const posts = await res.json();
+        posts.sort((a, b) => b.date.localeCompare(a.date));
+        const latest = posts.slice(0, 3);
+
+        if (!latest.length) {
+          gridEl.innerHTML = '<p>First post coming soon.</p>';
+          return;
+        }
+
+        gridEl.innerHTML = latest.map(post => `
+          <a class="post-card" href="posts/post.html?slug=${encodeURIComponent(post.slug)}">
+            <span class="post-card-date">${new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <h3 class="post-card-title">${post.title}</h3>
+            <p class="post-card-excerpt">${post.excerpt}</p>
+            <div class="tech-tags">${(post.tags || []).map(t => `<span class="tag-sm">${t}</span>`).join('')}</div>
+          </a>
+        `).join('');
+      } catch (err) {
+        console.error(err);
+        gridEl.innerHTML = '<p>Couldn\'t load posts right now.</p>';
+      }
+    })();
+  </script>
 </body>
 </html>

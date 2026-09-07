@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "2026-09-07-local-llm-structured-output-debugging",
+    "title": "Why Your Local LLM Keeps Returning Empty Structured Output (And How to Fix It)",
+    "date": "2026-09-07",
+    "excerpt": "Three failure modes I hit wiring a LangGraph agent pipeline to llama3.1:8b — enum fields returning full sentences, a list field that generated 8,000+ repeated fragments, and a nested object list that came back completely empty — and the fixes that actually worked.",
+    "tags": ["LLM", "LangGraph", "LangChain", "Ollama", "Debugging"]
+  }
+]

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Posts — Nidhi Berde</title>
+  <meta name="description" content="A daily-ish tech diary from Nidhi Berde — things built, debugged, or learned.">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZZTS0ND30"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KZZTS0ND30');
+  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Styles -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/posts.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html#home" class="nav-logo">NB<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="./" class="active">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="./">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== BLOG HERO ===== -->
+  <section class="section posts-hero">
+    <div class="container">
+      <h1 class="section-title">Technical Posts</h1>
+      <p class="posts-intro">A running tech diary — things I built, broke, debugged, or learned. Not polished, just real.</p>
+    </div>
+  </section>
+
+  <!-- ===== POST LIST ===== -->
+  <section class="section posts-list-section">
+    <div class="container">
+      <div id="posts-list" class="posts-grid">
+        <p>Loading posts…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>Designed &amp; Built by <strong>Nidhi Berde</strong></p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/nidhi-berde/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/NidhiTheBerde" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:nishiberde1998@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    (async function () {
+      const listEl = document.getElementById('posts-list');
+      try {
+        const res = await fetch('manifest.json');
+        const posts = await res.json();
+        posts.sort((a, b) => b.date.localeCompare(a.date));
+
+        if (!posts.length) {
+          listEl.innerHTML = '<p>No posts yet — check back soon.</p>';
+          return;
+        }
+
+        listEl.innerHTML = posts.map(post => `
+          <a class="post-card" href="post.html?slug=${encodeURIComponent(post.slug)}">
+            <span class="post-card-date">${new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <h3 class="post-card-title">${post.title}</h3>
+            <p class="post-card-excerpt">${post.excerpt}</p>
+            <div class="tech-tags">${(post.tags || []).map(t => `<span class="tag-sm">${t}</span>`).join('')}</div>
+          </a>
+        `).join('');
+      } catch (err) {
+        console.error(err);
+        listEl.innerHTML = '<p>Couldn\'t load posts right now.</p>';
+      }
+    })();
+  </script>
+</body>
+</html>

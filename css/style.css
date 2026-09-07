@@ -617,6 +617,18 @@ ul { list-style: none; }
   color: rgba(255, 255, 255, 0.25);
 }
 
+.project-img--newsum {
+  background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #f59e0b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-img--newsum i {
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
 .project-body {
   padding: 1.5rem;
   flex: 1;
