@@ -1,0 +1,72 @@
+[
+  {
+    "id": "mock-001",
+    "sender": "The Neuron <newsletter@theneuron.ai>",
+    "sender_domain": "theneuron.ai",
+    "subject": "Anthropic ships Claude Opus 5, its most capable model yet",
+    "body_text": "Anthropic released Claude Opus 5 this week, claiming state-of-the-art results on agentic coding and long-horizon reasoning benchmarks. The model supports a 1M token context window and is available today via the Claude API and claude.ai. Independent evaluators noted a significant jump in multi-step tool-use reliability compared to the previous generation. Pricing was kept flat versus Opus 4.5 despite the capability gains, a departure from prior release cycles where new flagship models carried a premium. Separately, Anthropic announced a $350M expansion of its enterprise partnerships program, adding integrations with three new cloud providers. Unsubscribe anytime at the link below.",
+    "received_at": "2026-09-01T13:05:00Z",
+    "has_unsubscribe_header": true,
+    "labels": ["CATEGORY_UPDATES"]
+  },
+  {
+    "id": "mock-002",
+    "sender": "Import AI <import-ai@substack.com>",
+    "sender_domain": "substack.com",
+    "subject": "Weekly AI Roundup: new frontier models, chip export rules, and a big Meta paper",
+    "body_text": "This week Anthropic launched Claude Opus 5, and early benchmarks suggest it leads on agentic coding tasks, though some researchers flagged the 1M-token context claims as measured under favorable conditions. Meanwhile Meta published a paper describing a new mixture-of-experts training recipe that cuts training compute by roughly 30% at equivalent quality, which could meaningfully lower the cost of frontier-scale training runs going forward. The US Commerce Department also proposed tightening export controls on advanced AI accelerators to a wider list of countries, a move that chipmakers warn could disrupt supply chains built over the last two years. Finally, a small startup called Cognition raised a $200M Series C to build autonomous coding agents, valuing the company at $2B.",
+    "received_at": "2026-09-01T09:30:00Z",
+    "has_unsubscribe_header": true,
+    "labels": ["CATEGORY_UPDATES"]
+  },
+  {
+    "id": "mock-003",
+    "sender": "TLDR AI <dan@tldrnewsletter.com>",
+    "sender_domain": "tldrnewsletter.com",
+    "subject": "TLDR AI: Claude Opus 5, Meta's efficient MoE, GPU export curbs",
+    "body_text": "Anthropic's new Claude Opus 5 is out, and it's being positioned as the strongest coding model available, with a notably larger context window than competitors. In hardware news, the Commerce Department floated new restrictions on GPU exports affecting a broader set of destination countries, which Nvidia said in a statement could cost it billions in near-term revenue if finalized as written. Also this week: Perplexity announced a redesigned enterprise search product aimed at internal knowledge bases, and Hugging Face reported that open weight model downloads crossed 5 billion for the year, up sharply from last year.",
+    "received_at": "2026-09-01T07:15:00Z",
+    "has_unsubscribe_header": true,
+    "labels": ["CATEGORY_UPDATES"]
+  },
+  {
+    "id": "mock-004",
+    "sender": "Ben's Bites <ben@bensbites.co>",
+    "sender_domain": "bensbites.co",
+    "subject": "Meta's training breakthrough could reshape the cost curve",
+    "body_text": "Meta's research team published details on a new mixture-of-experts architecture that reportedly reduces the compute needed to train frontier-scale models by about 30 percent without sacrificing benchmark performance. If replicated by other labs, this could shift the economics of training runs that currently cost hundreds of millions of dollars. In smaller news, Google DeepMind quietly rolled out an update to Gemini's coding assistant inside Android Studio, and OpenAI published a blog post clarifying its usage policy for autonomous agents acting on behalf of enterprise customers.",
+    "received_at": "2026-08-31T22:00:00Z",
+    "has_unsubscribe_header": true,
+    "labels": ["CATEGORY_UPDATES"]
+  },
+  {
+    "id": "mock-005",
+    "sender": "Stratechery Daily Update <ben@stratechery.com>",
+    "sender_domain": "stratechery.com",
+    "subject": "What tighter chip export rules mean for the AI supply chain",
+    "body_text": "The Commerce Department's proposal to widen export restrictions on advanced AI accelerators is the most consequential policy story in tech this week. If enacted, the rule would extend licensing requirements to a longer list of countries currently able to buy high-end GPUs with minimal friction. Nvidia and AMD both lobbied against an early draft, arguing it would push customers toward domestic Chinese alternatives faster than intended. Separately, Cognition's $200M raise for autonomous coding agents at a $2B valuation continues a trend of rich valuations for narrow agentic coding startups, several of which now compete directly with features being folded into general-purpose frontier models like Claude Opus 5.",
+    "received_at": "2026-08-31T18:45:00Z",
+    "has_unsubscribe_header": true,
+    "labels": ["CATEGORY_UPDATES"]
+  },
+  {
+    "id": "mock-006",
+    "sender": "RetailMeNot Deals <deals@retailmenot.com>",
+    "sender_domain": "retailmenot.com",
+    "subject": "Labor Day Sale: 40% off everything + free shipping",
+    "body_text": "Don't miss our biggest sale of the season! Use promo code LABOR40 at checkout for 40% off your entire order, plus free shipping on orders over $50. This limited time deal ends Monday at midnight. Shop now before your favorite items sell out. New markdowns added daily across electronics, home goods, and apparel.",
+    "received_at": "2026-09-01T11:00:00Z",
+    "has_unsubscribe_header": true,
+    "labels": ["CATEGORY_PROMOTIONS"]
+  },
+  {
+    "id": "mock-007",
+    "sender": "Punchbowl News <newsletter@punchbowl.news>",
+    "sender_domain": "punchbowl.news",
+    "subject": "AM Briefing: Senate advances spending bill, shutdown risk eases",
+    "body_text": "The Senate advanced a stopgap spending bill late last night by a 68-29 vote, easing fears of a government shutdown at the end of the month. The bill now heads to the House, where leadership says a vote could come as early as Thursday. Separately, a bipartisan group of senators introduced a new bill aimed at regulating AI model deployment in federal agencies, requiring impact assessments before procurement.",
+    "received_at": "2026-09-01T06:00:00Z",
+    "has_unsubscribe_header": true,
+    "labels": ["CATEGORY_UPDATES"]
+  }
+]

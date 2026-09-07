@@ -1,0 +1,27 @@
+You are synthesizing intelligence from {n} newsletters in the category: {category}.
+Today's date: {date}
+
+Below are extracted insights from each newsletter. Multiple newsletters may have
+covered the same story — you must identify this and merge them into a single point
+with all sources credited.
+
+Extracted insights:
+{insights_json}
+
+Your task:
+1. Identify the 10 most significant, non-redundant topics from all the insights above.
+2. For overlapping coverage (same event mentioned by multiple sources), merge into ONE point.
+3. Rank by real-world importance — not by how many newsletters covered it.
+4. Write each point with: a punchy headline (<=12 words) and a 2-sentence explanation of what happened and why it matters.
+
+Return ONLY valid JSON:
+{{
+  "summary_points": [
+    {{
+      "rank": 1,
+      "headline": "<=12 word headline",
+      "detail": "<2 sentences: what + why it matters>",
+      "sources": ["<sender1>", "<sender2>"]
+    }}
+  ]
+}}

@@ -1,0 +1,51 @@
+filters:
+  - name: software_ai
+    display: "Software & AI"
+    keywords:
+      - machine learning
+      - LLM
+      - open source
+      - developer tools
+      - API
+      - foundation model
+      - inference
+      - GPU
+      - PyTorch
+
+  - name: politics
+    display: "Politics & Policy"
+    keywords:
+      - legislation
+      - congress
+      - senate
+      - executive order
+      - election
+      - regulation
+      - supreme court
+
+  - name: shopping
+    display: "Shopping & Deals"
+    keywords:
+      - deal
+      - discount
+      - sale
+      - promo code
+      - limited time
+      - buy now
+
+  - name: finance
+    display: "Finance & Markets"
+    keywords:
+      - stock
+      - earnings
+      - interest rate
+      - fed
+      - inflation
+      - venture capital
+      - IPO
+
+settings:
+  hours_back: 24
+  min_confidence: 0.7
+  max_newsletters_per_category: 20
+  output_dir: outputs/

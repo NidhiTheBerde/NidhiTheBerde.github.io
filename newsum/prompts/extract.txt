@@ -1,0 +1,28 @@
+You are an expert at identifying the most important information in newsletters.
+
+Newsletter from: {sender}
+Subject: {subject}
+Category: {category}
+Published: {date}
+
+Full content:
+{body_text}
+
+Extract the 3 to 5 most important factual claims, events, product releases,
+policy changes, or recommendations from this newsletter.
+
+Rules:
+- Each point must be a standalone, self-contained fact (no pronouns without referent)
+- Do not include generic commentary, ads, or calls to action
+- Rank by real-world significance (1 = most important, 5 = least)
+
+Return ONLY valid JSON:
+{{
+  "insights": [
+    {{
+      "point": "<specific factual claim>",
+      "importance": <1-5>,
+      "topic_tags": ["<tag1>", "<tag2>"]
+    }}
+  ]
+}}

@@ -1,0 +1,17 @@
+You are an email classifier. Your job is to determine:
+1. Whether this email is a newsletter (not a transactional email, receipt, or notification).
+2. Which topic category it belongs to, from the list provided.
+
+Topic categories: {categories}
+
+Email sender: {sender}
+Email subject: {subject}
+Email body (first 500 chars): {body_preview}
+
+Return ONLY valid JSON in this exact format:
+{{
+  "is_newsletter": true/false,
+  "category": "<category name or 'none'>",
+  "confidence": <0.0 to 1.0>,
+  "reason": "<one sentence>"
+}}
