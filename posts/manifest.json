@@ -1,5 +1,12 @@
 [
   {
+    "slug": "2026-09-12-llms-legacy-code",
+    "title": "Why LLMs Struggle With Legacy Code",
+    "date": "2026-09-12",
+    "excerpt": "Skewed training data, missing implicit context, undocumented business rules, invisible side effects, thin test coverage, and asymmetric risk. Plus a look at what purpose-built models, multi-agent pipelines, and dependency-aware retrieval are actually doing about it.",
+    "tags": ["LLM", "Legacy Code", "Code Modernization", "Agents"]
+  },
+  {
     "slug": "2026-09-07-machine-learning-refresher",
     "title": "Machine Learning Refresher",
     "date": "2026-09-07",
