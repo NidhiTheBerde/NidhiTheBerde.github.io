@@ -38,7 +38,7 @@
         <li><a href="#volunteer">Volunteer</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a href="assets/Resume_Nidhi_Berde_Handshake.pdf"
+          <a href="assets/Resume_NidhiBerde_V.pdf"
              class="btn-resume" target="_blank" rel="noopener">Resume</a>
         </li>
       </ul>
@@ -54,7 +54,7 @@
       <a href="posts/">Blog</a>
       <a href="#volunteer">Volunteer</a>
       <a href="#contact">Contact</a>
-      <a href="assets/Resume_Nidhi_Berde_Handshake.pdf"
+      <a href="assets/Resume_NidhiBerde_V.pdf"
          target="_blank" rel="noopener">Resume</a>
     </div>
   </nav>
@@ -106,11 +106,13 @@
             At <strong>TCS</strong>, I build the backend and APIs behind an AI-powered document
             compliance platform for an aerospace &amp; defense client, handling 10,000+ regulated
             documents across 30+ file formats on AWS. I designed a fast document-matching system
-            that cut API costs by 60% while maintaining 90% accuracy, and built an LLM-powered
+            that cut API costs by 60% while maintaining 90% accuracy, built an LLM-powered
             data-quality framework that auto-generates validation checks from a table's schema and
-            answers natural-language questions over the data. Previously at <strong>Accenture</strong>,
-            I migrated 30+ TB of enterprise data from Hadoop to GCP BigQuery, improving query
-            performance by 35%.
+            answers natural-language questions over the data, and migrated the document-processing
+            pipeline from a custom worker-pool system to an event-driven architecture on AWS SQS
+            and Lambda, with infrastructure defined and deployed via Terraform. Previously at
+            <strong>Accenture</strong>, I migrated 30+ TB of enterprise data from Hadoop to GCP
+            BigQuery, improving query performance by 35%.
           </p>
           <p>
             I hold an M.S. in Computer Science (GPA 3.8) from Pace University and am AWS Certified
@@ -118,7 +120,7 @@
             at hackathons, traveling, or coaching Mallakhamb — including camps I led in Munich!
           </p>
           <div class="about-links">
-            <a href="assets/Resume_Nidhi_Berde_Handshake.pdf"
+            <a href="assets/Resume_NidhiBerde_V.pdf"
                class="btn-primary" target="_blank" rel="noopener">Download Resume</a>
             <a href="https://www.linkedin.com/in/nidhi-berde/"
                class="btn-outline" target="_blank" rel="noopener">LinkedIn</a>
@@ -171,6 +173,8 @@
             <span class="tag">Azure ADF</span>
             <span class="tag">AWS S3</span>
             <span class="tag">AWS EC2</span>
+            <span class="tag">AWS SQS</span>
+            <span class="tag">AWS Lambda</span>
             <span class="tag">GCP BigQuery</span>
           </div>
         </div>
@@ -199,6 +203,7 @@
             <span class="tag">CI/CD</span>
             <span class="tag">FastAPI</span>
             <span class="tag">Docker</span>
+            <span class="tag">Terraform</span>
           </div>
         </div>
 
@@ -227,7 +232,7 @@
               <li><strong>Backend Services &amp; LLM API Integration:</strong> Built and maintained Python/FastAPI backend services integrating Azure OpenAI LLMs into production workflows — exposing AI capabilities via REST APIs consumed by downstream systems, with CI/CD deployment on AWS (EC2, S3, ELB) and full production monitoring.</li>
               <li><strong>AI Pipeline Development &amp; Reliability:</strong> Designed and operated a production AI data pipeline processing <strong>10,000+ documents</strong> — combining LLM-driven classification, NLP-based validation, and structured data extraction, with observability tooling and confidence tracking for proactive failure detection.</li>
               <li><strong>Internal Systems Integration &amp; Data APIs:</strong> Built a Python-based backend framework interpreting schema metadata to generate SQL queries dynamically and expose validated, structured outputs via API for cross-functional product and data science teams.</li>
-              <li><strong>Performance Monitoring &amp; Improvement:</strong> Identified and resolved a throughput bottleneck by redesigning batch execution patterns — consolidating LLM API calls, improving response time, and reducing cloud infrastructure costs under production load.</li>
+              <li><strong>Event-Driven Architecture Migration:</strong> Redesigned the platform's database structure and migrated the document-processing pipeline from a custom worker-pool system to an event-driven architecture — each request queues in AWS SQS and triggers a Lambda to run the file-scanning pipeline, with dozens of Lambdas running concurrently at peak load, improving server utilization and processing speed, with infrastructure defined and deployed via Terraform.</li>
               <li><strong>Supplier Identification &amp; Document Matching:</strong> Built a name-matching system resolving product/manufacturer names against a 216,000-entry supplier registry — a vectorized first pass (TF-IDF) returns top candidate matches instantly with zero AI calls for high-confidence cases, with a GPT-4 Vision fallback analyzing document images/logos for ambiguous matches, re-validated through the same TF-IDF step. <strong>Cut per-lookup API costs by 60% and improved match accuracy from 33% to 85%.</strong></li>
             </ul>
             <div class="tech-tags">
@@ -235,6 +240,9 @@
               <span class="tag-sm">FastAPI</span>
               <span class="tag-sm">Azure OpenAI</span>
               <span class="tag-sm">AWS EC2/S3</span>
+              <span class="tag-sm">AWS SQS</span>
+              <span class="tag-sm">AWS Lambda</span>
+              <span class="tag-sm">Terraform</span>
               <span class="tag-sm">TF-IDF</span>
               <span class="tag-sm">GPT-4 Vision</span>
               <span class="tag-sm">CI/CD</span>
